@@ -833,17 +833,17 @@ O dataset MNIST é uma excelente introdução a problemas de classificação de 
 
 ---
 
-### Explorando o Dataset para Modelos de Classificação
+## Explorando o Dataset para Modelos de Classificação
 
 Antes de construir qualquer modelo de classificação, é essencial realizar uma exploração detalhada do dataset. Isso envolve entender a distribuição dos dados, características relevantes, e possíveis padrões entre as variáveis que ajudarão o modelo a fazer predições precisas. Vamos explorar esses aspectos com um exemplo prático.
 
 ---
 
-### 1. **Conceito: Análise Exploratória de Dados (EDA)**
+**1. Conceito: Análise Exploratória de Dados (EDA)**
 
 A **Análise Exploratória de Dados (EDA)** é o processo de resumir as principais características de um dataset, geralmente através de estatísticas descritivas e visualizações. O objetivo é detectar padrões, tendências, anomalias e relações entre as variáveis.
 
-### Tarefas típicas de EDA:
+**Tarefas típicas de EDA:**
 
 - Verificar a estrutura dos dados.
 - Entender as distribuições das variáveis.
@@ -852,11 +852,11 @@ A **Análise Exploratória de Dados (EDA)** é o processo de resumir as principa
 
 ---
 
-### 2. **Exemplo: Explorando o Dataset MNIST**
+**2. Exemplo: Explorando o Dataset MNIST**
 
 Vamos explorar o dataset MNIST, que contém imagens de dígitos manuscritos, utilizando Python e bibliotecas populares como **Pandas**, **Matplotlib** e **Seaborn** para visualização.
 
-### Passo 1: Carregar e inspecionar o dataset
+**Passo 1: Carregar e inspecionar o dataset**
 
 ```python
 pythonCopiar código
@@ -877,7 +877,7 @@ print(y.head())  # Mostra as primeiras linhas dos rótulos
 
 Neste exemplo, estamos carregando o **dataset MNIST** diretamente de uma biblioteca e inspecionando as primeiras linhas. O objetivo é obter uma visão geral dos dados e verificar sua estrutura.
 
-### Passo 2: Visualizar amostras do dataset
+**Passo 2: Visualizar amostras do dataset**
 
 ```python
 pythonCopiar código
@@ -894,7 +894,7 @@ Aqui, visualizamos uma das imagens do dataset, que é representada como uma matr
 
 ---
 
-### 3. **Conceito: Correlação entre as Variáveis**
+**3. Conceito: Correlação entre as Variáveis**
 
 A **correlação** entre as variáveis nos dá uma ideia de como elas se relacionam. No caso de dados de imagem, essa correlação pode ser difícil de interpretar diretamente, mas em datasets com características numéricas, é comum explorar como as variáveis de entrada estão relacionadas entre si e com a variável alvo.
 
@@ -902,7 +902,7 @@ A **correlação** entre as variáveis nos dá uma ideia de como elas se relacio
 - **Correlação Negativa**: Quando uma variável aumenta, a outra tende a diminuir.
 - **Correlação Nula**: Não há um padrão claro entre as variáveis.
 
-### Passo 3: Mapa de calor da correlação
+**Passo 3: Mapa de calor da correlação**
 
 Em problemas de classificação com variáveis numéricas, é comum criar um mapa de calor para visualizar a correlação.
 
@@ -925,11 +925,11 @@ plt.show()
 
 ---
 
-### 4. **Conceito: Processamento de Dados para Machine Learning**
+**4. Conceito: Processamento de Dados para Machine Learning**
 
 O **processamento de dados** é crucial para preparar o dataset antes de treinar os modelos. Em datasets de imagens como o MNIST, é necessário normalizar os dados (pixels com valores de 0 a 255 são convertidos para valores entre 0 e 1) para garantir que os modelos converjam de forma mais eficiente.
 
-### Passo 4: Normalização dos Dados
+**Passo 4: Normalização dos Dados**
 
 ```python
 pythonCopiar código
@@ -942,14 +942,14 @@ A normalização evita que características com grandes amplitudes dominem o tre
 
 ---
 
-### 5. **Conceito: Como Funciona o Treinamento de Modelos de Classificação**
+**5. Conceito: Como Funciona o Treinamento de Modelos de Classificação**
 
 O treinamento de um modelo de classificação envolve ajustar os pesos do modelo de forma a minimizar a função de custo (erro entre as previsões e os rótulos reais). Durante o treinamento, o modelo aprende a associar padrões nos dados de entrada (características) com as classes alvo (rótulos).
 
 - **Entradas (features)**: No MNIST, são os valores dos pixels.
 - **Saídas (labels)**: No MNIST, são os dígitos de 0 a 9.
 
-### Passo 5: Treinar um Modelo Simples de Classificação
+**Passo 5: Treinar um Modelo Simples de Classificação**
 
 Vamos treinar um **classificador de regressão logística** no dataset MNIST.
 
@@ -974,11 +974,11 @@ print(f'Acurácia: {accuracy_score(y_test, y_pred):.2f}')
 
 ---
 
-### 6. **Conceito: Cross-Validation e Comparação de Modelos**
+**6. Conceito: Cross-Validation e Comparação de Modelos**
 
 **Cross-Validation (Validação Cruzada)** é uma técnica usada para avaliar a performance de um modelo, dividindo o dataset em vários subconjuntos (folds). O modelo é treinado em alguns folds e testado nos folds restantes, garantindo que o modelo generalize bem para dados desconhecidos.
 
-### Passo 6: Aplicar Cross-Validation
+**Passo 6: Aplicar Cross-Validation**
 
 ```python
 pythonCopiar código
@@ -992,12 +992,4 @@ print(f'Validação Cruzada - Acurácia Média: {scores.mean():.2f}')
 
 A técnica ajuda a avaliar a estabilidade do modelo e comparar diferentes algoritmos, como KNN, SVM, ou redes neurais, para determinar qual funciona melhor em termos de acurácia, precisão, etc.
 
----
-
-### Conclusão
-
 A exploração e o processamento dos dados são essenciais para construir modelos de classificação precisos. A EDA permite entender as relações e padrões nos dados, enquanto técnicas como normalização e cross-validation ajudam a treinar e validar o modelo de maneira robusta.
-
-4o
-
-ChatGPT pode cometer erros. Considere verificar informações importantes.
