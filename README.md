@@ -1,6 +1,6 @@
-# DATA SCIENCE AND MACHINE LEARNING COM PYTHON
+# DATA SCIENCE E MACHINE LEARNING COM PYTHON
 
-# MACHINE LEARNING / MODELOS DE CLASSIFICAÇÃO E REGRESSÃO / ...
+**(MACHINE LEARNING | MODELOS DE CLASSIFICAÇÃO E REGRESSÃO | MODELOS NÃO SUPERVISIONADOS | MODELOS DE ÁRVORES E ENSEMBLE LEARNING)**
 
 ## Fundamentos de Machine Learning: Introdução ao Machine Learning
 
@@ -732,7 +732,6 @@ O objetivo ao usar o dataset MNIST é construir um modelo de classificação que
 Aqui está um exemplo de uso de Regressão Logística para classificar os dígitos no dataset MNIST:
 
 ```python
-pythonCopiar código
 # Importando bibliotecas
 import numpy as np
 import matplotlib.pyplot as plt
@@ -792,7 +791,6 @@ Com **Redes Neurais Convolucionais (CNNs)**, os resultados de classificação em
 Aqui está um exemplo básico usando **Keras** para construir uma CNN:
 
 ```python
-pythonCopiar código
 from tensorflow.keras import layers, models
 from tensorflow.keras.datasets import mnist
 
@@ -859,7 +857,6 @@ Vamos explorar o dataset MNIST, que contém imagens de dígitos manuscritos, uti
 **Passo 1: Carregar e inspecionar o dataset**
 
 ```python
-pythonCopiar código
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.datasets import fetch_openml
@@ -880,7 +877,6 @@ Neste exemplo, estamos carregando o **dataset MNIST** diretamente de uma bibliot
 **Passo 2: Visualizar amostras do dataset**
 
 ```python
-pythonCopiar código
 # Visualizando um dígito específico
 digit_sample = X.iloc[0].values.reshape(28, 28)
 
@@ -907,7 +903,6 @@ A **correlação** entre as variáveis nos dá uma ideia de como elas se relacio
 Em problemas de classificação com variáveis numéricas, é comum criar um mapa de calor para visualizar a correlação.
 
 ```python
-pythonCopiar código
 # Exemplo em outro dataset com variáveis numéricas
 import seaborn as sns
 import numpy as np
@@ -932,7 +927,6 @@ O **processamento de dados** é crucial para preparar o dataset antes de treinar
 **Passo 4: Normalização dos Dados**
 
 ```python
-pythonCopiar código
 # Normalizando os dados de imagem para valores entre 0 e 1
 X = X / 255.0
 
@@ -954,7 +948,6 @@ O treinamento de um modelo de classificação envolve ajustar os pesos do modelo
 Vamos treinar um **classificador de regressão logística** no dataset MNIST.
 
 ```python
-pythonCopiar código
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -981,7 +974,6 @@ print(f'Acurácia: {accuracy_score(y_test, y_pred):.2f}')
 **Passo 6: Aplicar Cross-Validation**
 
 ```python
-pythonCopiar código
 from sklearn.model_selection import cross_val_score
 
 # Cross-validation com 5 folds
@@ -993,3 +985,5 @@ print(f'Validação Cruzada - Acurácia Média: {scores.mean():.2f}')
 A técnica ajuda a avaliar a estabilidade do modelo e comparar diferentes algoritmos, como KNN, SVM, ou redes neurais, para determinar qual funciona melhor em termos de acurácia, precisão, etc.
 
 A exploração e o processamento dos dados são essenciais para construir modelos de classificação precisos. A EDA permite entender as relações e padrões nos dados, enquanto técnicas como normalização e cross-validation ajudam a treinar e validar o modelo de maneira robusta.
+
+---
